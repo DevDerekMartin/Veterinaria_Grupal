@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+.imagen{
+    width: 450px;
+    height: 400px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid ;
+}
+.contenedor_imagen{
+    margin-top: -4px;
+}
+.Texto{
+    margin-left: 5px;
+   
+    text-align: justify;   
+}
+
+

@@ -1,0 +1,100 @@
+.centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Principal {
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+    max-width: 80%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+.Titulo-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+}
+
+.Imagen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.Imagen img {
+    margin-right: 10px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(220, 220, 220);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.Titulo-icon img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(220, 220, 220);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.Contenedor-Text {
+    width: 100%;
+    text-align: justify;
+}
+
+
+.card{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #ffffff,#a4a4a6, #4c4b4b);   
+    margin-bottom: 4px; 
+}
+.card-content{
+    position: relative;
+    z-index: 2;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    transition: width 0.3s ease;
+    z-index: 1;
+    width: 0;
+
+}
+.card:hover::before{
+    width: 100%;
+    background: linear-gradient(to right,#9999fa, #2222f1);
+}
+.card-content:hover{
+    transition: 0.2s ease;
+    color: white;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.card-inicio{
+    background: linear-gradient(to right,#9999fa, #2222f1);
+    width: 20px;
+    border-right: 2px solid rgb(0,0,0);
+}
+
+.Contenedor-Text p{
+    font-size: 22px;
+}

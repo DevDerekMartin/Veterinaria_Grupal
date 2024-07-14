@@ -1,0 +1,150 @@
+.centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Principal {
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+    max-width: 80%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+.Titulo-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+}
+
+.Imagen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.Imagen img {
+    margin-right: 10px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(220, 220, 220);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Titulo-icon img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(220, 220, 220);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.Contenedor-Text {
+    width: 100%;
+    text-align: justify;
+}
+
+.List_Card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Añadir esta línea para permitir el ajuste de las tarjetas */
+    position: relative;
+    justify-content: flex-start; /* Cambiado a flex-start para evitar espacios extraños al envolver */
+    width: 100%;
+    gap: 60px;
+}
+
+.Card {
+    position: relative;
+    width: 347px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border: 1px solid rgb(239, 238, 238);
+    transition: transform 0.3s ease; /* Añadir transición para la tarjeta */
+    perspective: 1000px; /* Añadir perspectiva para el efecto 3D */
+}
+
+.Card:hover {
+    transform: scale(1.05); /* Escalar ligeramente la tarjeta al pasar el mouse por encima */
+}
+
+.Card .Content_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d; /* Necesario para el efecto 3D */
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+.Card .Content_img .image-front,
+.Card .Content_img .image-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden; /* Ocultar la cara trasera al girar */
+}
+
+.Card .Content_img .image-back {
+    transform: rotateY(180deg); /* Girar la imagen trasera inicialmente */
+}
+
+.Card:hover .Content_img {
+    transform: rotateY(180deg); /* Girar el contenedor al pasar el mouse */
+}
+
+.Card .Content-Text {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 26%;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    font-size: 17px;
+    text-align: center;
+    transition: color 0.3s ease; /* Añadir transición de color */
+}
+
+.Card:hover .Content-Text {
+    color: rgb(255, 255, 255); /* Cambiar a color blanco al pasar el mouse */
+    z-index: 5;
+}
+
+.Card .Content-Text p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: 0;
+}
+
+.Card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    transition: width 0.3s ease;
+    z-index: 4;
+    background-color: rgb(0, 0, 0);
+    height: 25%;
+    bottom: 0; 
+}
+
+.Card:hover::before {
+    width: 100%;
+}
+.Contenedor-Text p{
+    font-size: 22px;
+}

@@ -1,0 +1,103 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: auto;
+}
+
+.footer {
+    background-color: rgb(50, 50, 50);
+    padding: 60px 0;
+    color: #BBBBBB;
+    margin-top: 25px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    text-align: left; /* Alinea el texto dentro de cada columna a la izquierda */
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: left; /* Alinea los títulos a la izquierda */
+}
+
+.footer-links ul {
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 0; /* Elimina el padding izquierdo para que esté alineado con el título */
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+    text-align: left; /* Alinea cada ítem de la lista a la izquierda */
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    gap: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(91, 79, 79);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #00C3FF;
+}
+
+@media (max-width: 991px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        width: 100%;
+    }
+}
